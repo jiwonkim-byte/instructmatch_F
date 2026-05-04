@@ -1801,7 +1801,7 @@ function loadFromSheets() {
     // 교육_실적_로그 매핑
     var histMap = {};
     histRows.forEach(function(r) {
-      var id = (r['강사ID'] || '').trim();
+      var id = (r['강사ID'] || r['강사 ID'] || r['강사id'] || r['ID'] || r['A'] || '').trim();
       if (!id) return;
       if (!histMap[id]) histMap[id] = [];
       histMap[id].push({
